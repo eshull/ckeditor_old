@@ -29,11 +29,15 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import { HtmlEmbed } from '@ckeditor/ckeditor5-html-embed';
+import MathType from '@wiris/mathtype-ckeditor5';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
+	MathType,
+	HtmlEmbed,
 	Essentials,
 	UploadAdapter,
 	Autoformat,
@@ -79,7 +83,10 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'HtmlEmbed',
+			'MathType'
+
 		]
 	},
 	image: {
